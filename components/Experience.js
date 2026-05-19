@@ -5,46 +5,32 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const experiences = [
   {
-    company: "Techivation",
-    role: "Full Stack Developer (Part-time)",
-    period: "May 2025 – Present",
+    company: "青木科技股份有限公司",
+    role: "设计组长",
+    period: "2025.5 – 至今",
     description:
-      "Building and maintaining Techivation's full web and SaaS ecosystem powering audio plugin licensing and management.",
+      "负责泡泡玛特天猫/淘宝旗舰店首页前三屏创意策划及视觉设计，结合品牌调性与IP特性持续迭代。主导多IP合成毛绒系列视觉语言设计，确保品牌辨识度。覆盖主图、详情页、分类页等全店视觉输出，落地活动机制视觉方案。",
   },
   {
-    company: "VexLogic",
-    role: "Full Stack Engineer (Part-time)",
-    period: "Jun 2025 – Present",
+    company: "自由设计师（MBA在读）",
+    role: "独立设计师",
+    period: "2022.9 – 2025.4",
     description:
-      "Developing an AI-powered SaaS platform with real-time collaboration, billing systems, and modern infrastructure.",
+      "以独立设计师身份为品牌提供视觉设计服务，涵盖品牌视觉、电商页面、社媒物料等。曾在蓝色光标用AI工具完成Web开发与UI设计，建立B端产品设计组件库。",
   },
   {
-    company: "Comra AI",
-    role: "Full Stack Developer (Full-time)",
-    period: "Nov 2024 – Present",
+    company: "上海贸腾电子商务有限公司",
+    role: "视觉设计",
+    period: "2020.6 – 2022.10",
     description:
-      "Building immersive 3D virtual tour systems using React Three Fiber, Prisma, and PostgreSQL.",
+      "主导林肯、捷豹路虎等豪华车品牌S/A级大促活动整体视觉策划。通过数据分析和A/B测试优化，带动活动转化率提升30%。建立电商营销设计体系，制定跨平台视觉规范。",
   },
   {
-    company: "Digital Natives",
-    role: "Frontend Developer (Full-time)",
-    period: "Feb 2024 – Oct 2024",
+    company: "德施利安资产管理股份有限公司",
+    role: "视觉设计 / UI设计",
+    period: "2014.7 – 2020.6",
     description:
-      "Built scalable web apps and reusable UI systems using React, Next.js, and Tailwind CSS.",
-  },
-  {
-    company: "Fintechracy",
-    role: "Frontend Developer (Full-time)",
-    period: "Nov 2023 – Mar 2024",
-    description:
-      "Developed a mobile-first PWA for financial management with offline storage and barcode scanning.",
-  },
-  {
-    company: "Codintex",
-    role: "Software Engineer (Internship)",
-    period: "Earlier",
-    description:
-      "Worked on enterprise desktop apps using .NET and C#, gaining foundational experience in backend systems.",
+      "负责公司网站、App及H5界面交互设计，把控整体视觉风格。主导公司品牌形象升级，建立统一的品牌设计语言。负责品牌海报、电商详情页、Banner等线上线下物料设计。",
   },
 ];
 
@@ -82,7 +68,7 @@ export default function Experience() {
             My <span className="text-gold">Journey</span>
           </h2>
           <p className="text-thr font-cabinet text-lg">
-            Experience &amp; professional growth
+            12年设计经验 · 从视觉到品牌的成长之路
           </p>
         </motion.div>
 

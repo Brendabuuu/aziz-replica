@@ -19,7 +19,7 @@ export default function Nav() {
       <a href="#home">
         <Image
           src="/images/logo.png"
-          alt="Logo"
+          alt="Brenda Logo"
           width={28}
           height={36}
           className="cursor-pointer"

@@ -4,9 +4,8 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { name: "LinkedIn", icon: "in", url: "https://www.linkedin.com/in/aziz-khaldi-b28207261/" },
-  { name: "GitHub", icon: "gh", url: "https://github.com/AzizKhaldi01" },
-  { name: "WhatsApp", icon: "wa", url: "https://wa.me/213779577865" },
+  { name: "Email", icon: "em", url: "mailto:brenda_pu@163.com" },
+  { name: "Phone", icon: "ph", url: "tel:+8617612157859" },
 ];
 
 const staggerItem = {
@@ -59,9 +58,9 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          KHALID AHMED
+          BRENDA
           <br />
-          <span className="text-gold">ABDELAZIZ</span>
+          <span className="text-gold">卜晓冬</span>
         </motion.h1>
 
         {/* Title */}
@@ -73,10 +72,10 @@ export default function Hero() {
           animate="visible"
         >
           <p className="text-thr font-cabinet text-lg md:text-xl lg:text-2xl leading-relaxed">
-            I&apos;m Aziz — a{" "}
-            <span className="text-sec font-semibold">Full Stack Developer</span>{" "}
-            crafting fast, scalable, and immersive digital experiences that merge
-            creativity with technology.
+            I&apos;m Brenda — a{" "}
+            <span className="text-sec font-semibold">Visual &amp; UI Designer</span>{" "}
+            crafting compelling brand experiences with 12 years of expertise in
+            e-commerce, creative strategy, and data-driven design.
           </p>
         </motion.div>
 
@@ -88,7 +87,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {["Full Stack Developer", "UI & UX Designer", "SaaS Architect"].map(
+          {["Brand & Visual Design", "E-commerce Design", "UI/UX Design", "AI Design Tools"].map(
             (skill) => (
               <span
                 key={skill}

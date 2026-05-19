@@ -5,32 +5,32 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const works = [
   {
-    title: "Comra AI",
-    category: "3D Virtual Tours",
+    title: "泡泡玛特旗舰店",
+    category: "天猫/淘宝旗舰店",
     description:
-      "Immersive 3D virtual tour system built with React Three Fiber, enabling interactive spatial experiences.",
-    tech: ["React Three Fiber", "Prisma", "PostgreSQL", "Three.js"],
+      "负责首页前三屏创意策划及视觉设计，结合IP特性动态调整。主导多IP合成毛绒系列视觉语言设计，确保品牌辨识度。覆盖主图、详情页、分类页、社媒物料等全链路视觉输出。",
+    tech: ["品牌视觉", "IP设计", "电商页面", "全链路视觉"],
   },
   {
-    title: "Techivation",
-    category: "SaaS Platform",
+    title: "林肯官方旗舰店",
+    category: "豪华车品牌电商",
     description:
-      "Full SaaS ecosystem powering audio plugin licensing, user management, and subscription billing.",
-    tech: ["Next.js", "Stripe", "Node.js", "PostgreSQL"],
+      "负责店铺所有页面视觉把控与持续更新，首页、详情页、主图、推广素材等创意设计。优化精品产品展示页面，提升浏览深度与购买转化率。",
+    tech: ["视觉策划", "A/B测试", "转化优化", "Data-driven"],
   },
   {
-    title: "VexLogic",
-    category: "AI Platform",
+    title: "捷豹路虎小程序",
+    category: "小程序设计",
     description:
-      "AI-powered SaaS platform with real-time collaboration features and modern infrastructure.",
-    tech: ["React", "AI/ML", "WebSockets", "Cloud"],
+      "负责小程序界面排版、整体风格把控及交互设计。与前端工程师对接并完成后台内容持续更新。打造与豪华车品牌调性一致的移动端体验。",
+    tech: ["UI设计", "交互设计", "品牌调性", "小程序"],
   },
   {
-    title: "Digital Natives",
-    category: "Web Applications",
+    title: "Closetly 衣橱管理App",
+    category: "UI设计规范",
     description:
-      "Scalable web applications and reusable UI component systems for enterprise clients.",
-    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+      "设计现代极简+时尚轻奢风格的衣橱管理App UI规范。涵盖色彩系统、字体排版、布局规范及交互模式，以iOS原生风格为主，适配Material You。",
+    tech: ["UI Design", "Design System", "Figma", "HIG"],
   },
 ];
 
@@ -57,10 +57,10 @@ export default function Works() {
           viewport={{ once: true }}
         >
           <h2 className="font-righteous text-4xl md:text-5xl lg:text-6xl text-sec mb-4">
-            Featured <span className="text-gold">Works</span>
+            Featured <span className="text-gold">Projects</span>
           </h2>
           <p className="text-thr font-cabinet text-lg">
-            Projects that showcase my expertise
+            作品展示 · 从品牌视觉到产品设计的完整实践
           </p>
         </motion.div>
 

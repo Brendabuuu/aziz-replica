@@ -29,7 +29,7 @@ export default function About() {
             About <span className="text-gold">Me</span>
           </h2>
           <p className="text-thr font-cabinet text-lg max-w-xl">
-            Scroll to Explore My Short Story
+            Scroll to Explore My Story
           </p>
         </motion.div>
 
@@ -41,8 +41,8 @@ export default function About() {
           >
             <div className="relative w-full aspect-[3/4] max-w-md mx-auto overflow-hidden rounded-2xl">
               <Image
-                src="/images/aziz-about.jpg"
-                alt="Aziz Khaldi"
+                src="/images/brenda-about.jpg"
+                alt="Brenda Pu"
                 fill
                 className="object-cover"
                 priority
@@ -62,23 +62,22 @@ export default function About() {
           >
             <div className="flex flex-wrap gap-3 mb-6">
               <span className="px-3 py-1 bg-gold/10 text-gold text-xs tracking-widest uppercase rounded-full font-cabinet">
-                Full-Stack Developer
+                Visual &amp; Brand Designer
               </span>
               <span className="px-3 py-1 bg-white/5 text-thr text-xs tracking-widest uppercase rounded-full font-cabinet">
-                UI &amp; UX Designer
+                UI &amp; E-commerce Design
               </span>
             </div>
 
             <p className="text-thr font-cabinet text-base md:text-lg leading-relaxed mb-6">
-              Driving measurable growth and engagement through thoughtful design
-              and engineering. Every product I build starts with understanding
-              user goals and translating them into intuitive, high-performance
-              experiences.
+              资深设计师，12年视觉设计经验。专注视觉营销设计与产品界面设计，
+              擅长数据驱动的设计决策，具备跨部门协作经验和团队管理能力。
             </p>
 
             <p className="text-thr/70 font-cabinet text-base leading-relaxed mb-8">
-              From concept to launch, I focus on meaningful results—boosting
-              user engagement, retention, and overall business impact.
+              曾主导泡泡玛特、林肯等多个电商大型活动视觉策划，为项目带来显著的转化提升。
+              具有MBA商业背景，注重设计价值与商业目标的深度结合。
+              MBA毕业于华东理工大学，主修消费心理与行为营销、设计思维。
             </p>
 
             {/* Stats */}
@@ -91,7 +90,7 @@ export default function About() {
                   transition={{ delay: 0.2, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  03+
+                  12+
                 </motion.p>
                 <p className="text-thr/60 text-sm font-cabinet mt-1">
                   Years of Experience
@@ -105,10 +104,10 @@ export default function About() {
                   transition={{ delay: 0.4, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  20+
+                  08+
                 </motion.p>
                 <p className="text-thr/60 text-sm font-cabinet mt-1">
-                  Projects Completed
+                  Brands Served
                 </p>
               </div>
             </div>

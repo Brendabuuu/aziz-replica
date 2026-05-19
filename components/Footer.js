@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/aziz-khaldi-b28207261/" },
-    { name: "GitHub", url: "https://github.com/AzizKhaldi01" },
-    { name: "WhatsApp", url: "https://wa.me/213779577865" },
-    { name: "Email", url: "mailto:contact@azizkhaldi.com" },
+    { name: "Email", url: "mailto:brenda_pu@163.com" },
+    { name: "Phone", url: "tel:+8617612157859" },
   ];
 
   return (
@@ -27,13 +25,12 @@ export default function Footer() {
             Let&apos;s <span className="text-gold">Connect</span>
           </h2>
           <p className="text-thr font-cabinet text-lg max-w-xl mx-auto">
-            Have a project in mind? Let&apos;s work together to create something
-            amazing.
+            有设计项目想法？一起合作打造令人惊叹的作品。
           </p>
         </motion.div>
 
         <motion.div
-          className="flex flex-wrap justify-center gap-8 mb-16"
+          className="flex flex-wrap justify-center gap-8 mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -62,8 +59,11 @@ export default function Footer() {
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
         >
+          <p className="text-thr/50 font-cabinet text-sm mb-2">
+            brenda_pu@163.com · 176 1215 7859
+          </p>
           <p className="text-thr/40 font-cabinet text-sm">
-            © {new Date().getFullYear()} Aziz Khaldi. Crafted with care.
+            © {new Date().getFullYear()} Brenda Pu. Crafted with care.
           </p>
         </motion.div>
       </div>

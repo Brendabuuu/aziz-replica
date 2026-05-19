@@ -7,27 +7,27 @@ import { useScroll, useTransform } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Full Stack Development",
+    title: "品牌视觉与创意策划",
     description:
-      "Building end-to-end web applications with Next.js, React, Node.js, and modern frameworks. Delivering scalable, performant solutions from database to deployment.",
+      "主导品牌旗舰店创意视觉策划，结合品牌调性与IP特性持续迭代。从首页前三屏到活动承接页，打造统一的品牌视觉语言与沉浸式购物体验。",
   },
   {
     num: "02",
-    title: "UI/UX Design & Frontend",
+    title: "电商全链路设计",
     description:
-      "Designing modern, responsive interfaces with Figma, Tailwind CSS, and Framer Motion. Creating intuitive experiences with clean design systems and pixel-perfect implementations.",
+      "覆盖天猫、淘宝等平台全链路视觉输出——主图、详情页、分类页、推广素材。通过数据分析和A/B测试优化，带动活动转化率提升30%。",
   },
   {
     num: "03",
-    title: "SaaS Platform Development",
+    title: "UI/交互设计",
     description:
-      "Developing end-to-end SaaS solutions with subscription systems, Stripe billing, and multi-tenant management. Ensuring scalability and secure user management.",
+      "负责App、Web及H5界面交互设计，把控整体视觉风格。建立设计规范与组件库，确保产品多端适配与统一的品牌体验。",
   },
   {
     num: "04",
-    title: "API & System Architecture",
+    title: "AI驱动创意设计",
     description:
-      "Designing maintainable APIs with PostgreSQL, Prisma, and MongoDB. Focusing on performance optimization, security best practices, and reliable data flow.",
+      "熟练运用Midjourney、Stable Diffusion等AI工具提升创意效率与产出质量。以AI赋能设计流程，将创意概念快速转化为高品质视觉素材。",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Services() {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [0, 1, 1, 0]);
 
   // Marquee text
-  const marqueeText = "FULL-STACK DEVELOPER  UI & UX DESIGNER  ";
+  const marqueeText = "VISUAL DESIGN  UI DESIGN  BRAND STRATEGY  ";
   const repeatedMarquee = marqueeText.repeat(6);
 
   return (
@@ -79,8 +79,7 @@ export default function Services() {
           What <span className="text-gold">I Do</span>
         </h2>
         <p className="text-thr font-cabinet text-center text-lg mb-16 max-w-2xl mx-auto">
-          Driving measurable growth and engagement through thoughtful design and
-          engineering
+          数据驱动的设计决策，兼具商业视角与创意执行力
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
