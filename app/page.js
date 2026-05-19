@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="page curveRoute overflow-hidden relative">
+    <div className="page curveRoute overflow-hidden relative bg-[#e7e7e7]">
       <AnimatePresence mode="wait">
         {loading && <PageTransition key="transition" />}
       </AnimatePresence>

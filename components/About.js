@@ -1,8 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+
+const paragraphs = [
+  "这里是你的个人介绍第一段。描述你的背景、专业和经验。",
+  "这里是第二段介绍内容。可以写你的设计理念、擅长领域和成就。",
+];
 
 export default function About() {
   const sectionRef = useRef(null);
@@ -10,47 +15,40 @@ export default function About() {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-4 md:px-8 lg:px-16 bg-main overflow-hidden"
+      className="relative py-24 md:py-32 px-4 md:px-8 lg:px-16 bg-[#e7e7e7] overflow-hidden"
     >
-      {/* Top curve decoration */}
-      <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-main to-transparent" />
-
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div className="mb-16" style={{ opacity }}>
-          <h2 className="font-righteous text-4xl md:text-5xl lg:text-6xl text-sec mb-4">
-            About <span className="text-gold">Me</span>
+          <h2 className="font-righteous text-4xl md:text-5xl lg:text-6xl text-[#1e1e1e] mb-4">
+            About <span className="text-[#c9a96e]">Me</span>
           </h2>
-          <p className="text-thr font-cabinet text-lg max-w-xl">
-            Scroll to Explore My Story
-          </p>
+          <div className="text-container">
+            <p className="text-[#1e1e1e]/60 font-cabinet text-lg max-w-xl">
+              这里是一句副标题
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left - Image */}
+          {/* Left - Image placeholder */}
           <motion.div
             className="relative"
-            style={{ y }}
+            style={{ y: useTransform(scrollYProgress, [0, 1], [100, -100]) }}
           >
-            <div className="relative w-full aspect-[3/4] max-w-md mx-auto overflow-hidden rounded-2xl">
-              <Image
-                src="/images/brenda-about.jpg"
-                alt="Brenda Pu"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="relative w-full aspect-[3/4] max-w-md mx-auto overflow-hidden rounded-2xl bg-[#1e1e1e]/5 flex items-center justify-center">
+              <span className="text-[#1e1e1e]/30 font-cabinet text-lg">
+                你的照片
+              </span>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold/30 rounded-full" />
-            <div className="absolute -top-4 -left-4 w-16 h-16 border-2 border-white/10 rounded-full" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-[#c9a96e]/30 rounded-full" />
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-2 border-[#1e1e1e]/10 rounded-full" />
           </motion.div>
 
           {/* Right - Content */}
@@ -61,53 +59,41 @@ export default function About() {
             viewport={{ once: true }}
           >
             <div className="flex flex-wrap gap-3 mb-6">
-              <span className="px-3 py-1 bg-gold/10 text-gold text-xs tracking-widest uppercase rounded-full font-cabinet">
-                Visual &amp; Brand Designer
+              <span className="px-3 py-1 bg-[#c9a96e]/10 text-[#c9a96e] text-xs tracking-widest uppercase rounded-full font-cabinet">
+                标签 1
               </span>
-              <span className="px-3 py-1 bg-white/5 text-thr text-xs tracking-widest uppercase rounded-full font-cabinet">
-                UI &amp; E-commerce Design
+              <span className="px-3 py-1 bg-[#1e1e1e]/5 text-[#1e1e1e]/60 text-xs tracking-widest uppercase rounded-full font-cabinet">
+                标签 2
               </span>
             </div>
 
-            <p className="text-thr font-cabinet text-base md:text-lg leading-relaxed mb-6">
-              资深设计师，12年视觉设计经验。专注视觉营销设计与产品界面设计，
-              擅长数据驱动的设计决策，具备跨部门协作经验和团队管理能力。
-            </p>
-
-            <p className="text-thr/70 font-cabinet text-base leading-relaxed mb-8">
-              曾主导泡泡玛特、林肯等多个电商大型活动视觉策划，为项目带来显著的转化提升。
-              具有MBA商业背景，注重设计价值与商业目标的深度结合。
-              MBA毕业于华东理工大学，主修消费心理与行为营销、设计思维。
-            </p>
+            {paragraphs.map((text, i) => (
+              <p
+                key={i}
+                className={`text-[#1e1e1e]/80 font-cabinet text-base md:text-lg leading-relaxed ${
+                  i < paragraphs.length - 1 ? "mb-6" : "mb-8"
+                }`}
+              >
+                {text}
+              </p>
+            ))}
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <motion.p
-                  className="font-righteous text-4xl md:text-5xl text-gold"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  12+
-                </motion.p>
-                <p className="text-thr/60 text-sm font-cabinet mt-1">
-                  Years of Experience
+                <p className="font-righteous text-4xl md:text-5xl text-[#c9a96e]">
+                  00
+                </p>
+                <p className="text-[#1e1e1e]/40 text-sm font-cabinet mt-1">
+                  年份经验
                 </p>
               </div>
               <div>
-                <motion.p
-                  className="font-righteous text-4xl md:text-5xl text-gold"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  08+
-                </motion.p>
-                <p className="text-thr/60 text-sm font-cabinet mt-1">
-                  Brands Served
+                <p className="font-righteous text-4xl md:text-5xl text-[#c9a96e]">
+                  00+
+                </p>
+                <p className="text-[#1e1e1e]/40 text-sm font-cabinet mt-1">
+                  项目经历
                 </p>
               </div>
             </div>

@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Brenda Pu | 卜晓冬 · Design Portfolio",
+  title: "Brenda Pu | Design Portfolio",
   description:
-    "Brenda Pu（卜晓冬）的视觉设计作品集 — 12年品牌视觉与电商设计经验，专注视觉营销设计与产品界面设计。",
+    "Brenda Pu 的设计作品集 — 视觉设计与品牌创意",
 };
 
 export default function RootLayout({ children }) {

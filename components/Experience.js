@@ -5,32 +5,28 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const experiences = [
   {
-    company: "青木科技股份有限公司",
-    role: "设计组长",
-    period: "2025.5 – 至今",
-    description:
-      "负责泡泡玛特天猫/淘宝旗舰店首页前三屏创意策划及视觉设计，结合品牌调性与IP特性持续迭代。主导多IP合成毛绒系列视觉语言设计，确保品牌辨识度。覆盖主图、详情页、分类页等全店视觉输出，落地活动机制视觉方案。",
+    company: "公司名称 1",
+    role: "职位名称",
+    period: "202X – 至今",
+    description: "这里是工作经历描述，替换为你实际的经历内容。",
   },
   {
-    company: "自由设计师（MBA在读）",
-    role: "独立设计师",
-    period: "2022.9 – 2025.4",
-    description:
-      "以独立设计师身份为品牌提供视觉设计服务，涵盖品牌视觉、电商页面、社媒物料等。曾在蓝色光标用AI工具完成Web开发与UI设计，建立B端产品设计组件库。",
+    company: "公司名称 2",
+    role: "职位名称",
+    period: "202X – 202X",
+    description: "这里是工作经历描述，替换为你实际的经历内容。",
   },
   {
-    company: "上海贸腾电子商务有限公司",
-    role: "视觉设计",
-    period: "2020.6 – 2022.10",
-    description:
-      "主导林肯、捷豹路虎等豪华车品牌S/A级大促活动整体视觉策划。通过数据分析和A/B测试优化，带动活动转化率提升30%。建立电商营销设计体系，制定跨平台视觉规范。",
+    company: "公司名称 3",
+    role: "职位名称",
+    period: "202X – 202X",
+    description: "这里是工作经历描述，替换为你实际的经历内容。",
   },
   {
-    company: "德施利安资产管理股份有限公司",
-    role: "视觉设计 / UI设计",
-    period: "2014.7 – 2020.6",
-    description:
-      "负责公司网站、App及H5界面交互设计，把控整体视觉风格。主导公司品牌形象升级，建立统一的品牌设计语言。负责品牌海报、电商详情页、Banner等线上线下物料设计。",
+    company: "公司名称 4",
+    role: "职位名称",
+    period: "202X – 202X",
+    description: "这里是工作经历描述，替换为你实际的经历内容。",
   },
 ];
 
@@ -54,7 +50,7 @@ export default function Experience() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-4 md:px-8 lg:px-16 bg-main overflow-hidden"
+      className="relative py-24 md:py-32 px-4 md:px-8 lg:px-16 bg-[#e7e7e7] overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -64,20 +60,19 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-righteous text-4xl md:text-5xl lg:text-6xl text-sec mb-4">
-            My <span className="text-gold">Journey</span>
+          <h2 className="font-righteous text-4xl md:text-5xl lg:text-6xl text-[#1e1e1e] mb-4">
+            My <span className="text-[#c9a96e]">Journey</span>
           </h2>
-          <p className="text-thr font-cabinet text-lg">
-            12年设计经验 · 从视觉到品牌的成长之路
+          <p className="text-[#1e1e1e]/60 font-cabinet text-lg">
+            这里是副标题
           </p>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-white/10">
+          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-[#1e1e1e]/10">
             <motion.div
-              className="w-full bg-gold/50"
+              className="w-full bg-[#c9a96e]/50"
               style={{ height: lineHeight }}
             />
           </div>
@@ -93,22 +88,21 @@ export default function Experience() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
               >
-                {/* Timeline dot */}
-                <div className="absolute -left-[1.65rem] md:-left-[3.3rem] top-1 w-3 h-3 rounded-full bg-gold border-2 border-main" />
+                <div className="absolute -left-[1.65rem] md:-left-[3.3rem] top-1 w-3 h-3 rounded-full bg-[#c9a96e] border-2 border-[#e7e7e7]" />
 
-                <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8 hover:border-gold/20 transition-all duration-500">
+                <div className="bg-white/[0.5] border border-[#1e1e1e]/5 rounded-2xl p-6 md:p-8 hover:border-[#c9a96e]/20 transition-all duration-500">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                    <h3 className="font-cabinet text-xl md:text-2xl font-bold text-sec">
+                    <h3 className="font-cabinet text-xl md:text-2xl font-bold text-[#1e1e1e]">
                       {exp.company}
                     </h3>
-                    <span className="text-gold/70 text-sm font-cabinet">
+                    <span className="text-[#c9a96e]/70 text-sm font-cabinet">
                       {exp.period}
                     </span>
                   </div>
-                  <p className="text-thr/60 text-sm font-cabinet mb-3 uppercase tracking-wider">
+                  <p className="text-[#1e1e1e]/50 text-sm font-cabinet mb-3 uppercase tracking-wider">
                     {exp.role}
                   </p>
-                  <p className="text-thr/70 font-cabinet text-base leading-relaxed">
+                  <p className="text-[#1e1e1e]/60 font-cabinet text-base leading-relaxed">
                     {exp.description}
                   </p>
                 </div>

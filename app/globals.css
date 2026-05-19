@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "@fontsource/righteous";
-@import "@fontsource/megrim";
 
 /* Custom fonts */
 @font-face {
@@ -21,11 +20,29 @@
   font-weight: 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Megrim";
+  src: url("/fonts/Megrim.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
 
 @theme {
-  --color-main: #111111;
-  --color-sec: #fafafa;
-  --color-thr: #c7c7c7;
+  --color-main: #e7e7e7;
+  --color-sec: #1e1e1e;
+  --color-thr: #d4f534;
   --color-gold: #c9a96e;
   --font-righteous: "Righteous", cursive;
   --font-megrim: "Megrim", cursive;
@@ -48,38 +65,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Awwwards badge */
-#awwwards {
-  position: fixed;
-  z-index: 999;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+/* Hide scrollbar but keep functionality */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
-/* Noise texture overlay */
-.noise-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0.05;
-  z-index: 1000;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-main);
-}
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 3px;
+html::-webkit-scrollbar {
+  display: none;
 }
 
 /* Page transition */
@@ -91,4 +83,78 @@ body {
   right: 0;
   background-color: #111111;
   z-index: 50;
+}
+
+/* Word-by-word animation container */
+.text-container {
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-right: 0.5rem;
+}
+@media (min-width: 768px) {
+  .word-wrapper {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .word-wrapper {
+    margin-right: 1.5rem;
+  }
+}
+
+.word {
+  display: inline-block;
+  white-space: pre;
+}
+
+/* Noise texture overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Timeline dot animation */
+.timeline-dot {
+  opacity: 0;
+  will-change: transform, opacity, scale;
+  transform-origin: center;
+}
+
+.timeline-content {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Wave animation for SVG */
+@keyframes wave {
+  0% { d: path("M 2 12 Q 5 9 8 12 Q 11 15 14 12 Q 17 9 20 12 Q 21 13 22 12"); }
+  25% { d: path("M 2 12 Q 5 15 8 12 Q 11 10 14 12 Q 17 15 20 12 Q 21 11 22 12"); }
+  50% { d: path("M 2 12 Q 5 9 8 12 Q 11 17 14 12 Q 17 9 20 12 Q 21 13 22 12"); }
+  75% { d: path("M 2 12 Q 5 15 8 12 Q 11 10 14 12 Q 17 15 20 12 Q 21 11 22 12"); }
+  100% { d: path("M 2 12 Q 5 9 8 12 Q 11 15 14 12 Q 17 9 20 12 Q 21 13 22 12"); }
+}
+.animate-wave {
+  animation: wave 7s ease-in-out infinite;
+}
+
+/* Awwwards badge style */
+.awwwards-badge {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
